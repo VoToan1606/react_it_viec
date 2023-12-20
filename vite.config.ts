@@ -16,9 +16,6 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
     plugins: [react(), visualizer() as PluginOption],
-    build: {
-      outDir: "build",
-    },
     server: {
       port: parseInt(env.PORT)
     },
